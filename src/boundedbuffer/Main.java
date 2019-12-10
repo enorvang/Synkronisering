@@ -17,7 +17,7 @@ public class Main {
 				new Konsument("Espen", mutex, empty, full, buffer),
 				new Konsument("Ingrid", mutex, empty, full, buffer),
 				new Konsument("Morten", mutex, empty, full, buffer),
-				new Konsument("Jonas", mutex, empty, full, buffer) 
+				new Konsument("Hanna", mutex, empty, full, buffer) 
 				};
 
 		produsent.start();
