@@ -3,15 +3,13 @@ package boundedbuffer;
 import java.util.concurrent.Semaphore;
 
 public class Produsent extends Thread {
-	private String navn;
 	private Semaphore mutex;
 	private Semaphore empty;
 	private Semaphore full;
 	private Buffer<Integer> buffer;
 
 
-	public Produsent(String navn, Semaphore mutex, Semaphore empty, Semaphore full, Buffer<Integer> buffer) {
-		this.navn = navn;
+	public Produsent( Semaphore mutex, Semaphore empty, Semaphore full, Buffer<Integer> buffer) {
 		this.mutex = mutex;
 		this.empty = empty;
 		this.full = full;
@@ -30,8 +28,8 @@ public class Produsent extends Thread {
 
 				verdi++;
 				buffer.leggTil(verdi);
-				System.out.println("[" + navn + "]" + " produserte: " + verdi);
-				Thread.sleep(50);
+				System.out.println("Produserte: " + verdi);
+				Thread.sleep(20);
 				
 				//frigir låsen
 				mutex.release();
