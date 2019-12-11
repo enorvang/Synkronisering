@@ -10,7 +10,6 @@ public class Buffer<T> {
 		liste = new LinkedList<>();
 	}
 	
-	
 	public void leggTil(T t) {
 		liste.add(t);
 	}
